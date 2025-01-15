@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practically Perfect Pixel Pines Premere Project", "Practically Perfect Pixel Pines Premere Project.csproj", "{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B796B56F-9DBE-4B6C-A2E5-608CEE7279F5}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

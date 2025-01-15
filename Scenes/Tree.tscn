@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bswoc4bq4rbc7"]
+
+[ext_resource type="Texture2D" uid="uid://cudn76x6jrdub" path="res://Assets/Doodads/Tree.png" id="1_m1r5g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5dj2"]
+radius = 22.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, -29)
+texture = ExtResource("1_m1r5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_n5dj2")
