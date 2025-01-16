@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://84u23gwppvs4"]
 
-[ext_resource type="PackedScene" uid="uid://dtiwsh8mftm0n" path="res://Scenes/Character1.tscn" id="1_c50jx"]
+[ext_resource type="PackedScene" uid="uid://tcojl4f7xp5i" path="res://Scenes/Character2.tscn" id="2_gtx68"]
 [ext_resource type="PackedScene" uid="uid://bswoc4bq4rbc7" path="res://Scenes/Tree.tscn" id="2_nd1d2"]
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -24,5 +25,5 @@ position = Vector2(419, 145)
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_nd1d2")]
 position = Vector2(476, 510)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_c50jx")]
-position = Vector2(271, 245)
+[node name="Character2" parent="." instance=ExtResource("2_gtx68")]
+position = Vector2(188, 225)

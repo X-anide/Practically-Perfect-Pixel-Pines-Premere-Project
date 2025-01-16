@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://tcojl4f7xp5i"]
+
+[ext_resource type="Texture2D" uid="uid://dvguvhbdsnmkp" path="res://Assets/Character/Char2Atlas.png" id="1_wwoog"]
+[ext_resource type="Script" path="res://Code/Character2Sprite.cs" id="2_5avpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nekn"]
+atlas = ExtResource("1_wwoog")
+region = Rect2(0, 0, 234, 100)
+
+[sub_resource type="Animation" id="Animation_8pgj3"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_sji7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ukc3i"]
+resource_name = "walk"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3q7x4"]
+_data = {
+"RESET": SubResource("Animation_sji7j"),
+"idle": SubResource("Animation_8pgj3"),
+"walk": SubResource("Animation_ukc3i")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6w2rs"]
+radius = 14.0357
+
+[node name="Character2" type="CharacterBody2D"]
+script = ExtResource("2_5avpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -23)
+texture = SubResource("AtlasTexture_5nekn")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3q7x4")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6w2rs")
